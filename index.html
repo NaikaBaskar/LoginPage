@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	 <meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="img/bg2.jpg">
+	<div class="container">
+		<div class="img">
+			<!-- <img src="img/bg2.jpg"> -->
+		</div>
+		<div class="login-content">
+			<form action="index.html" autocomplete="off">
+				<img src="img/avatar1.svg">
+				<h2 class="title">Login</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input autocomplete="nope" type="text" class="input" id="userName" name="name">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input"  autocomplete="new-password" id="passwd" name="password">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<div class="buttons">
+            	<input type="submit" onclick="loginUser()" class="btn" value="Login"  id="submit" >
+            	<input type="button" class="btn" value="SignUp">
+               </div>
+            </form>
+        </div>
+    </div>
+    <script>
+    	function loginUser(){
+    		if($("#userName").val()=="" || $("#passwd").val()=="")
+    		{
+    			alert("Fields cannot be Empty");
+    		}
+    		else if($("#userName").val()=="Baskar" && $("#passwd").val()=="password")
+    		{
+    			alert("Login SucessFul")
+    		}
+    		else
+    		{
+    			alert("Invalid Credentials")
+    		}
+    	}
+    </script>
+    
+</body>
+</html>
